@@ -1,0 +1,97 @@
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Noto Sans', Arial, sans-serif;
+	margin: 0;
+	font-size: 16px;
+}
+
+.nav-wrap {
+	background: rgba(0,0,0,.05);
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+#logo {
+	font-weight: bold;
+	line-height: 33px;
+}
+
+ul.menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height: 33px;
+}
+
+ul.menu li {
+	display: inline-block;
+	margin: 0 10px;
+}
+
+ul.menu a {text-decoration: none;}
+
+#nav-icon {
+	display: none;
+	cursor: pointer;
+	width: 34px;
+	height: 34px;
+}
+
+#nav-icon {
+	background-image: url("menu-ham-black.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#nav-icon:hover {
+	/*background-image: url("menu-ham-red.svg");*/
+}
+
+@media screen and (max-width: 700px) {
+
+	#nav-icon {
+		display: block;
+	}
+
+	#nav-icon.menu-close {
+		background-image: url("menu-close-black.svg");
+	}
+
+	#top-nav {
+		flex-basis: 100%;
+		margin-top: 20px;
+		display: none;
+		/*background: rgba(0,0,0,.1);*/
+	}
+
+	#top-nav.nav-active {
+		display: block;
+	}
+
+	ul.menu li {
+		display: block;
+		margin: 0 0;
+		border-top: 1px solid rgba(0,0,0,.05);
+		/*border-bottom: 1px solid rgba(0,0,0,.05);*/
+	}
+
+	ul.menu a {
+		display: block;
+		padding: 10px 0;
+	}
+
+	ul.menu a:hover {
+		color: red;
+	}
+
+} /* 600px media end */

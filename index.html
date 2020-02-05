@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Menu Responsive 2020</title>
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+	<div class="nav-wrap">
+
+		<div id="logo">
+			Logo
+		</div>
+
+		<div id="nav-icon"></div>
+
+		<div id="top-nav">
+			<ul class="menu">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Portfolio</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+
+	</div><!-- nav-wrap -->
+
+	<script type="text/javascript">
+		// div#top-nav
+		let menuIcon = document.getElementById('nav-icon'); // div#nav-icon [hamburger and close icon, svg] 
+		let topNav = document.getElementById('top-nav');
+		// when hamburger icon is clicked
+		menuIcon.addEventListener('click', function(){
+			// div#top-nav add class .nav-active
+			topNav.classList.toggle('nav-active');
+			// change menu icon from menu-ham-black to menu-close-black.svg (in CSS background)
+			menuIcon.classList.toggle('menu-close');
+		});
+	</script>
+</body>
+</html>
